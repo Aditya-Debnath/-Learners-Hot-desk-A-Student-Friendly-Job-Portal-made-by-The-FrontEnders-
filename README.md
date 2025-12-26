@@ -55,10 +55,86 @@ Learners-Hot-desk/
 ├── Code/
 │   ├── assets/            # CSS, JS, Fonts, and Images
 │   ├── config.php         # Database connection settings
-│   ├── project_jobportal.sql # Main Database file
+│   ├── project_jobportal.sql # Old Main Database file
 │   ├── index.php          # Landing page
 │   ├── login.php          # Authentication
 │   ├── dashboard.php      # User dashboard
-│   ├── ... (other php files)
+│   ├── chat.php
+│   ├── chat_handler.php
+│   ├── config.php
+│   ├── dashboard.php
+│   ├── fix_session.php
+│   ├── footer.php
+│   ├── header.php
+│   ├── job-applicants.php
+│   ├── job-applied.php
+│   ├── job-detail.php
+│   ├── jobs.php
+│   ├── Learners-Hot-desk.sql
+│   ├── login.php
+│   ├── logout.php
+│   ├── post-job.php
+│   ├── register.php
+│   ├── report.php
+│   ├── saved-jobs.php
+│   ├── sql_schema.sql
+│   ├── verify.php
 ├── Report/                # Project documentation and diagrams
+│   ├── Project_Report_479.pdf
 └── README.md
+
+```
+## ⚙️ Installation & Setup Guide
+
+### 1. Prerequisites
+*   You must have **XAMPP** (or a similar local server environment like WAMP/MAMP) preinstalled on your desktop.
+*   Ensure **Apache** and **MySQL** ports are available (default ports 80/443 and 3306).
+
+### 2. File Deployment
+1.  Download the repository as a ZIP file.
+2.  Extract the contents of the `Code` folder into your XAMPP `htdocs` directory.
+    *   *Typical Path:* `C:\xampp\htdocs\Learners-Hot-desk`
+
+### 3. Database Configuration
+1.  Open the **XAMPP Control Panel** and start **Apache** and **MySQL**.
+2.  Open your browser and navigate to `http://localhost/phpmyadmin/`.
+3.  Click on the **Databases** tab.
+4.  Create a new database named strictly: **`project_jobportal`**
+5.  Select the created database and click the **Import** tab.
+6.  Choose the `project_jobportal.sql` file (located in the root of the source code) and click **Go**.
+
+### 4. Applying Constraints (Crucial Step)
+To ensure the "Saved Jobs" functionality works correctly with cascading deletes, you must manually run the constraint query.
+
+1.  In phpMyAdmin, select the `project_jobportal` database.
+2.  Click on the **SQL** tab.
+3.  Copy and paste the following command block and click **Go**:
+
+# 👥 Contributors
+
+This project, **"Learners’ Hot-desk"**, was developed by **The FrontEnders** team as part of the **CSE479 (Web Programming)** course at **East West University**.
+
+### 👨‍💻 Team Members
+
+| Student Name | Student ID |
+| :--- | :--- |
+| **Sayma Sultana** | 2022-1-60-405 |
+| **Aditya Debnath** | 2022-2-60-124 |
+| **Afia Tabassum** | 2023-1-60-091 |
+
+<br>
+
+### 🎓 Academic Details
+
+*   **Course:** CSE479 (Section 2)
+*   **Department:** Computer Science and Engineering
+*   **Institution:** East West University
+
+<br>
+
+### 📝 Submitted To
+
+**Md. Arman Hossain**  
+Lecturer  
+Department of Computer Science and Engineering  
+East West University
